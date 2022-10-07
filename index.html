@@ -5,12 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
-    <input type="text" name="" id="km" value="" placeholder=" numero di km">
-    <input type="text" name="" id="age" value="" placeholder="età">
-    <button id="genera">genera</button>
+<body class="bg">
+    <section class="input">
+        <h1 class="text-white text-center">Calcola il prezzo del tuo biglietto</h1>
+        <div class="container bg-white rounded-4">
+            <div class="row my-3">
+                <div class="col">
+                    <label class="form-label text-uppercase text-white">nome</label>
+                    <input type="text" class="form-control" name="" id="name" placeholder="nome">
+                </div>
+                <div class="col">
+                    <label class="form-label text-uppercase text-white">cognome</label>
+                    <input type="text" class="form-control" name="" id="lastname" placeholder="cognome">
+                </div>
+                <div class="col">
+                    <label class="form-label text-uppercase text-white">km da percorrere</label>
+                    <input type="text" class="form-control" name="" id="km" value="" placeholder=" numero di km">
+                </div>
+                <div class="col">
+                    <label class="form-label text-uppercase text-white">età</label>
+                    <input type="text" class="form-control" name="" id="age" value="" placeholder="età">
+                </div>
+                <div class="text-center my-4">
+                    <button id="genera" class="btn btn-secondary">genera</button>
+                    <button class="btn btn-secondary">annulla</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <p></p>
     <div class="teen_discount"></div>
     <div class="final_teen"></div>
@@ -19,5 +45,10 @@
     <div class="discount_none"></div>
 
     <script src="./assets/js/main.js"></script>
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+      </script>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+      </script>
