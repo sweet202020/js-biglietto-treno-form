@@ -22,6 +22,8 @@ const userAge = document.getElementById("age")
 //bottone che genera il risultato
 const buttonGenerator = document.getElementById("genera")
 
+document.querySelector(".your_ticket").style.display= "none"
+
 buttonGenerator.addEventListener("click", function(){
     console.log('nome utente' , userName.value)
     console.log('cognome utente', lastName.value)
@@ -32,6 +34,7 @@ buttonGenerator.addEventListener("click", function(){
     wholePrice = wholePrice.toFixed(2);
     const cabine = document.querySelector(".cabine").innerHTML+=(Math.floor(Math.random()*10))
     const code = document.querySelector(".code").innerHTML+=(Math.floor(Math.random()*10000000))
+    document.querySelector(".your_ticket").style.display= "block"
     
     if (userAge.value<18) {
         const teenDiscount = (wholePrice * 0.20);
