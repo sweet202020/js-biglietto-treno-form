@@ -30,23 +30,25 @@ buttonGenerator.addEventListener("click", function(){
     document.querySelector(".name_passenger").innerHTML+=(userName.value)
     let wholePrice = (NumberKm.value * 0.21);
     wholePrice = wholePrice.toFixed(2);
-    document.querySelector('.int').innerHTML = ('il prezzo intero del treno è: ' + wholePrice + '€');
+    const cabine = document.querySelector(".cabine").innerHTML+=(Math.floor(Math.random()*10))
+    const code = document.querySelector(".code").innerHTML+=(Math.floor(Math.random()*10000000))
     
     if (userAge.value<18) {
         const teenDiscount = (wholePrice * 0.20);
-        document.querySelector('.teen_discount').innerHTML = ('lo sconto che possiamo applicare per te è di: ' + teenDiscount + '€');
+        document.querySelector('.teen_discount').innerHTML += ('lo sconto che possiamo applicare per te è di: ' + teenDiscount + '€');
         let finalPriceTeen = (wholePrice - teenDiscount);
         finalPriceTeen = finalPriceTeen.toFixed(2);
-        document.querySelector('.final_teen').innerHTML = ('il prezzo del biglietto con lo sconto applicato è: ' + finalPriceTeen + '€');
+        document.querySelector('.final_teen').innerHTML += ('il prezzo del biglietto con lo sconto applicato è: ' + finalPriceTeen + '€');
         
     } else if (userAge.value>65){
         const overDiscount = (wholePrice * 0.40);
-        document.querySelector('.old_discount').innerHTML =('lo sconto che possiamo applicare per te è di: ' + overDiscount + '€');
+        document.querySelector('.old_discount').innerHTML +=('lo sconto che possiamo applicare per te è di: ' + overDiscount + '€');
         let finalOldPrice = (wholePrice - overDiscount);
         finalOldPrice = finalOldPrice.toFixed(2);
-        document.querySelector('.final_old').innerHTML =('il prezzo del biglietto con lo sconto applicato è: ' + finalOldPrice + '€');
+        document.querySelector('.final_old').innerHTML +=('il prezzo del biglietto con lo sconto applicato è: ' + finalOldPrice + '€');
     } else {
-        document.querySelector('.discount_none').innerHTML = ('non puoi avere nessuno sconto')
+        document.querySelector('.discount_none').innerHTML+=("non ci sono offerte disponibili")
+        document.querySelector('.int').innerHTML+= ('il prezzo intero del treno è: ' + wholePrice + '€');
     
     }
 })

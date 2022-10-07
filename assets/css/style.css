@@ -12,6 +12,9 @@
     padding: 1rem 0;
     padding-left: 0.3rem;
 }
+.your_ticket .generator{
+    height: 200px;
+}
 .your_ticket h4{
     padding: 2rem 0;
     color: #B91450;
