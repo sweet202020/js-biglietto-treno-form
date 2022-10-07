@@ -11,6 +11,10 @@ va applicato uno sconto del 40% per gli over 65.
 Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra.
 La risposta finale (o output) sarà anch’essa da scrivere in console.
 */
+//input nome stampato in console
+const userName = document.getElementById("name")
+//input cognome stampato in console
+const lastName = document.getElementById("lastname")
 //input numero km stampato in console
 const NumberKm = document.getElementById("km")
 //input età stampato in console
@@ -19,11 +23,14 @@ const userAge = document.getElementById("age")
 const buttonGenerator = document.getElementById("genera")
 
 buttonGenerator.addEventListener("click", function(){
+    console.log('nome utente' , userName.value)
+    console.log('cognome utente', lastName.value)
     console.log('km da percorrere', NumberKm.value)
     console.log('età utente' , userAge.value)
+    document.querySelector(".name_passenger").innerHTML+=(userName.value)
     let wholePrice = (NumberKm.value * 0.21);
     wholePrice = wholePrice.toFixed(2);
-    document.querySelector('p').innerHTML = ('il prezzo intero del treno è: ' + wholePrice + '€');
+    document.querySelector('.int').innerHTML = ('il prezzo intero del treno è: ' + wholePrice + '€');
     
     if (userAge.value<18) {
         const teenDiscount = (wholePrice * 0.20);
@@ -42,6 +49,10 @@ buttonGenerator.addEventListener("click", function(){
         document.querySelector('.discount_none').innerHTML = ('non puoi avere nessuno sconto')
     
     }
+})
+const refresh = document.getElementById("annulla")
+refresh.addEventListener("click", function(){
+    document. location. reload()
 })
 
 

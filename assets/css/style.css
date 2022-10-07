@@ -6,3 +6,14 @@
 .bg{
     background-color: #B91450;
 }
+.input label{
+    color: #B91450;
+    font-weight: 900;
+    padding: 1rem 0;
+    padding-left: 0.3rem;
+}
+.your_ticket h4{
+    padding: 2rem 0;
+    color: #B91450;
+
+}
