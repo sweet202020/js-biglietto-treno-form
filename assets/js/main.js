@@ -12,29 +12,29 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 La risposta finale (o output) sarà anch’essa da scrivere in console.
 */
 //input nome stampato in console
-const userName = document.getElementById("name")
+const userName = document.getElementById("name");
 //input cognome stampato in console
-const lastName = document.getElementById("lastname")
+const lastName = document.getElementById("lastname");
 //input numero km stampato in console
-const NumberKm = document.getElementById("km")
+const NumberKm = document.getElementById("km");
 //input età stampato in console
-const userAge = document.getElementById("age")
+const userAge = document.getElementById("age");
 //bottone che genera il risultato
-const buttonGenerator = document.getElementById("genera")
+const buttonGenerator = document.getElementById("genera");
 
-document.querySelector(".your_ticket").style.display= "none"
+document.querySelector(".your_ticket").style.display= "none";
 
 buttonGenerator.addEventListener("click", function(){
-    console.log('nome utente' , userName.value)
-    console.log('cognome utente', lastName.value)
-    console.log('km da percorrere', NumberKm.value)
-    console.log('età utente' , userAge.value)
-    document.querySelector(".name_passenger").innerHTML+=(userName.value)
+    console.log('nome utente' , userName.value);
+    console.log('cognome utente', lastName.value);
+    console.log('km da percorrere', NumberKm.value);
+    console.log('età utente' , userAge.value);
+    document.querySelector(".name_passenger").innerHTML+=(userName.value);
     let wholePrice = (NumberKm.value * 0.21);
     wholePrice = wholePrice.toFixed(2);
-    const cabine = document.querySelector(".cabine").innerHTML+=(Math.floor(Math.random()*10))
-    const code = document.querySelector(".code").innerHTML+=(Math.floor(Math.random()*10000000))
-    document.querySelector(".your_ticket").style.display= "block"
+    const cabine = document.querySelector(".cabine").innerHTML+=(Math.floor(Math.random()*10));
+    const code = document.querySelector(".code").innerHTML+=(Math.floor(Math.random()*10000000));
+    document.querySelector(".your_ticket").style.display= "block";
     
     if (userAge.value<18) {
         const teenDiscount = (wholePrice * 0.20);
@@ -55,9 +55,9 @@ buttonGenerator.addEventListener("click", function(){
     
     }
 })
-const refresh = document.getElementById("annulla")
+const refresh = document.getElementById("annulla");
 refresh.addEventListener("click", function(){
-    document. location. reload()
+    document. location. reload();
 })
 
 
